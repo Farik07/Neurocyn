@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Pagina hecha para Neurocyn -->
+    <title>Neurocyn</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="js/script.js"></script>
+<style id="dark-mode-placeholder"></style>
+
+</head>
+
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="50">
+<!-- Boton flotante de Whatsapp -->
+    <div class="floating-whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=2225187198&text=Hola%20quiero%20hacer%20una%20consulta" target="_blank">
+            <img src="https://static.whatsapp.net/rsrc.php/v3/y7/r/DSxOAUB0raA.png" alt="WhatsApp">
+        </a>
+    </div>
+    
+    <nav class="navbar navbar-default navbar-fixed-top">   
+    <div class="container-fluid">
+        <div class="navbar-header"> 
+            <!-- Esto es para mostrar un menu en dispositivos moviles -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <!-- Muestra el nombre y logo de Neurocyn -->
+            <a class="navbar-brand" href="#home">
+                <div class="logo-container">
+                    <span class="logo-text">Neurocyn</span>
+                    <img class="logo-image" src="img/logo.jpg" alt="Neurocyn">
+                </div>
+            </a>
+        </div>
+
+        <!-- Barra de navegacion -->
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home">INICIO</a></li>
+                <li><a href="#team">NOSOTROS</a></li>
+                <li><a href="#tour">INSTALACIONES</a></li>
+                <li><a href="#contact">CONTACTO</a></li>        
+                <li class="dropdown" id="dropdownMenu">
+                    <a class="dropdown-toggle" data-toggle="dropdown"  aria-expanded="false" id="dropdownToggle">MAS
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li> 
+                    </ul>
+                </li>
+
+                <!-- Boton para el darkmode -->
+                <li class="toggle-switch">
+                    <input type="checkbox" id="toggle-theme">
+                    <label for="toggle-theme"></label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Contendra 3 diapositivas en el carousel con sus descripciones -->
+    <div class="carousel-container">
+        <div id="myCarousel" class="carousel slide" data-touch="true" data-interval="false">
+<!-- Indicadores -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+<!-- Contenedor de las diapositivas -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="img/imagen1.webp" alt="New York" class="carousel-image">
+                    <div class="carousel-caption">
+                       <h3>New York</h3>
+                       <p>The atmosphere in New York is lorem ipsum.</p>
+                    </div>      
+                </div>
+                <div class="item">
+                    <img src="img/imagen2.webp" alt="Chicago" class="carousel-image">
+                    <div class="carousel-caption">
+                      <h3>Cámara multisensorial</h3>
+                      <p>Favorece un mayor desarrollo y correcta maduracion de los sentidos</p>
+                    </div>      
+                </div>
+                <div class="item">
+                    <img src="img/imagen3.webp" alt="Los Angeles" class="carousel-image">
+                    <div class="carousel-caption">
+                        <h3>LA</h3>
+                        <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+                    </div>      
+                </div>
+            </div>
+<!-- Controles de izquierda y derecha -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+
+<!-- Contenedor de Equipo de trabajo -->
+    <div id="team" class="container text-center" >
+        
+<!-- Descripcion general -->
+        <h3>THE team</h3>
+            <p><em>We love music!</em></p>
+            <p class="parrafo">We have created a fictional team website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <br>
+
+
+
+
+<!-- Descripcion individual -->
+<div class="container">
+  <div class="row slideanim">
+    <div class="col-sm-6 col-lg-4">
+      <p class="text-center"><strong>Neuropicóloga Cynthia Paola Morales Róldan</strong></p><br>
+      <a href="#medico1" data-toggle="collapse">
+        <img src="img/team1.webp" class="img-circle person d-block" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="medico1" class="collapse">
+        <p>Maestria en Neuropsicología</p>
+        <p>Lic. en Psicología con especialidad en Tanatalogía</p>
+        <p>Especialista en Estimulación Multisensorial</p>
+        <p>Especialista en Crianza Respetuosa</p>
+        <p>Diplomado en intervención integral en Autismo y TDAH</p>
+        <p>Diplomado de juego en la educación</p>
+        <p>Diplomado en psicoterapia estratégica e intervención en crisis</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+      <p class="text-center"><strong>Doctora Sandra Lizette Morales Roldan</strong></p><br>
+      <a href="#medico2" data-toggle="collapse">
+        <img src="img/team2.webp" class="img-circle person d-block" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="medico2" class="collapse">
+        <p>Lic. en Nutrición Humana y Dietética</p>
+        <p>Maestría en Nutrición Clínica</p>
+        <p>Educadora Certificada en Nutrición Infantil</p>
+        <p>Especialista en Lactancia y Ablactación</p>
+        <p>Educadora Certificada en Diabetes</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="carouselExample" class="carouselExample slide d-none d-lg-block" data-ride="carousel" data-touch="true" >
+  <!-- Indicadores del carrusel -->
+  <div class="carousel-container">
+  <ol class="carousel-indicators ">
+    <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExample" data-slide-to="1"></li>
+  </ol>
+  
+  <!-- Slides del carrusel -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="row ">
+        <div class="col-sm-4">
+          <p class="text-center"><strong>Neuropicóloga Cynthia Paola Morales Róldan</strong></p><br>
+          <a href="#medico1-movil" data-toggle="collapse">
+            <img src="img/team1.webp" class="img-circle person d-block w-100" alt="Random Name" >
+          </a>
+          <div id="medico1-movil" class="collapse">
+            <p>Maestria en Neuropsicología</p>
+            <p>Lic. en Psicología con especialidad en Tanatalogía</p>
+            <p>Especialista en Estimulación Multisensorial</p>
+            <p>Especialista en Crianza Respetuosa</p>
+            <p>Diplomado en intervensión integral en Autismo y TDAH</p>
+            <p>Diplomado de juego en la educación</p>
+            <p>Diplomado en psicoterapia estratégia e intervención en crisis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="row ">
+        <div class="col-sm-4">
+          <p class="text-center"><strong>Doctora Sandra Lizette Morales Roldan</strong></p><br>
+          <a href="#medico2-movil" data-toggle="collapse">
+            <img src="img/team2.webp" class="img-circle person d-block w-100" alt="Random Name" width="255" height="255">
+          </a>
+          <div id="medico2-movil" class="collapse">
+            <p>Lic. en Nutrición Humana y Dietetica</p>
+            <p>Maestria en Nutrición Clinica</p>
+            <p>Educadora Certificada en Nutricion Infantil</p>
+            <p>Especialista en Lactancia y Ablactación</p>
+            <p>Educadora Cetrificada en Diabetes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  </div>
+  
+  
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+ <!-- Contenedor de video -->
+ <div id="tour" class="bg-1">
+ <div class="container-fluid text-center mx-auto">
+    <h3 class="text-center">Instalaciones</h3>
+    <p class="text-center">Lorem ipsum we'll play you some music.<br> Remember to book your tickets!</p>
+    <div id="video-container">
+        <div class="video-wrapper">
+            <video class="resizable-video" id="myVideo1" src="https://storage.googleapis.com/media-session/caminandes/short.mp4" controls loop controlsList="nodownload nofullscreen" oncontextmenu="return false;" preload="metadata"  ></video>
+            <p><strong>Paris</strong></p>
+            <p>Friday 27 November 2015</p>
+        </div>
+
+        <div class="video-wrapper">
+            <video class="resizable-video" id="myVideo2" src="https://drive.google.com/uc?id=14VwIPxP1lcnTu4DRsy5IVLqljLAfuEV4&export=download" controls loop controlsList="nodownload nofullscreen" oncontextmenu="return false;" preload="metadata"></video>
+            <p><strong>New York</strong></p>
+            <p>Saturday 28 November 2015</p>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+  
+
+
+<!-- Contenedor de seccion Contacto -->
+<div id="contact" class="container">
+  <h3 class="text-center">Contactanos</h3>
+  <p class="text-center"><em>¡Agenda tu cita!</em></p>
+  <div class="row2 slideanim">
+    <div class="col-md-4 mb-4">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.0482965415576!2d-98.20417968641509!3d19.004621712999665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfbf58ad2399d1%3A0xb517171394a5208b!2sFacultad%20de%20Ciencias%20de%20la%20Computaci%C3%B3n%20-%20BUAP!5e0!3m2!1ses-419!2smx!4v1682904448370!5m2!1ses-419!2smx" width="340" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="col-md-4 text-center d-flex align-items-center">
+  <div class="mb-4">
+    <p><span class="glyphicon glyphicon-map-marker"></span> Puebla, México C.P. 72080</p>
+    <p><span class="glyphicon glyphicon-phone"></span> Telefono: +52 222422224692</p>
+    <p><span class="glyphicon glyphicon-envelope"></span> Email: neuro.cynthia@gmail.com</p>
+  </div>
+  <div class="mb-4">
+    <div class="form-group">
+      <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
+    </div>
+    <div class="form-group">
+      <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+    </div>
+    <textarea class="form-control" id="comments" name="comments" placeholder="Comentario" rows="5"></textarea>
+    <br>
+    <div class="form-group">
+      <button class="btn pull-right" type="submit">Enviar</button>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+
+
+<!-- Image of location/map -->
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#home" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p> 
+</footer>
+
+
+
+</body>
+</html>

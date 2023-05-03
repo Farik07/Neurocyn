@@ -1,0 +1,599 @@
+body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777; 
+    background-color: #B0E0E6;
+    margin: auto;
+    overflow-x: hidden; 
+
+    
+  }
+
+
+.parrafo {
+  margin: 20px; /* Margen normal */
+  text-align: justify!important;
+}
+
+@media (max-width: 768px) {
+  .parrafo {
+    margin: 10px; /* Margen reducido en pantallas redimensionadas */
+  }
+}
+
+
+
+  
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 2px;      
+    font-size: 20px;
+    color: #111;
+  }
+
+  /* Estilos para el modo oscuro */
+  body.dark-mode {
+    background-color: #111;
+    color: #ddd;
+  }
+
+
+
+.dark-mode .bg-1{
+    background-color: #1e1e1e;
+    color: #111;
+}
+
+.bg-1 {
+    background: #FFB6C1;
+    color: #ddd;
+}
+
+  .dark-mode h3, .dark-mode h4 {
+  color: #fff; /* Color para el modo oscuro */
+}
+
+.dark-mode .thumbnail p{
+    background-color: #fff;
+}
+
+.dark-mode .text-center{
+    color: #ddd;
+}
+
+
+
+.text-center{
+    color: #111;
+}
+
+
+
+
+  .slideanim {visibility:hidden;}
+  .slide {
+  /* The name of the animation */
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+   .logo-container {
+     display: flex;
+    align-items: center;
+    height: 20px;
+
+    }
+
+    .logo-image {
+      width: 30px; /* Ajusta el tamaño de la imagen según tus necesidades */
+      height: 30px;
+      border-radius: 50%; /* Aplica un radio del 50% para hacerla circular */
+     margin-right: 5px; /* Espacio entre el logo y el texto */
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    } 
+
+    .logo-text {
+    font-size: 16px; /* Ajusta el tamaño de la fuente del texto según tus necesidades */
+     line-height: 1; /* Ajusta el espaciado entre líneas del texto según tus necesidades */
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+
+}
+
+.row2 {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+  .container {
+    /*padding: 10px; */
+    text-align: center;
+    position: relative;
+    
+    
+  }
+
+
+  
+
+
+.navbar-collapse.in {
+    height: 340px;
+    display: contents;
+    /* overflow-y: auto; */
+}
+  
+  .container-fluid> 
+    .navbar-collapse {
+    padding-right: 32px;
+
+    overflow-x: hidden;
+
+    }
+
+  .person {
+    border: 10px solid transparent;
+    
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+  }
+
+/*Esto cambia el estilo de las imagenes del equipo en la version movil*/
+#carouselExample .person {
+    border: 10px solid transparent;
+    
+    width: 50%;
+    height: auto;
+    opacity: 0.9;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+
+
+/*Esto cambia el tamaño de las imagenes del carousel en la version movil*/
+  .carousel-inner img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(0%); /* make all photos black and white */ 
+    width: 100%; /* Cambiar el ancho de la imagen */
+    height: auto; /* Hacer que la altura se ajuste proporcionalmente */
+    margin: auto;
+}
+
+/* Estilos para ocultar el carrusel en pantallas grandes */
+@media (min-width: 768px) {
+  .carousel-inner img {
+    width: 50%; /* Cambiar el ancho de la imagen */
+    height: auto; /* Hacer que la altura se ajuste proporcionalmente */
+    margin: auto;
+    display: none;
+  }
+  
+  #carouselExample .carousel-inner{
+
+    display: none;
+  }
+  #carouselExample .carousel-indicators{
+    display: none;
+
+  }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+}
+
+.img-circle {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 255px;
+  height: 255px;
+}
+
+
+
+#carouselExample .carousel-container {
+   padding-bottom: 35px;
+  overflow: hidden;
+  margin-top: 0px; /* Ajusta el valor según el tamaño de tu barra de navegación */
+  /* Estilos adicionales para el contenedor del carrusel */
+}
+
+  .carousel-image {
+  width: 400px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+  z-index: 0;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 96);
+}
+
+  }
+ 
+  .bg-1 h3 {color: #111;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+
+
+
+.resizable-video {
+  position: relative;
+  width: 90%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .resizable-video {
+    width: 70%; /* Ajusta el ancho del video en la pantalla normal */
+    height: auto; /* La altura se ajustará automáticamente proporcionalmente al ancho */
+  }
+}
+
+
+#video-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  /*height: 400px;  Ajusta el valor de altura según tus necesidades */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+
+.thumbnail{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+    .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+    }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  
+  .navbar {
+    position: sticky;
+    transition: height 0.3s ease;
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #FFB6C1;
+    border: 0;
+    font-size: 10px !important;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    z-index: 1;
+    margin: auto;
+   }
+
+   /* Estilos para la barra de navegación expandida */
+.navbar.expanded {
+  height: 200px; /* Ajusta la altura deseada */
+}
+
+.navbar.expanded .navbar-brand {
+  margin-top: 15px; /* Ajusta el margen superior deseado */
+}
+
+.navbar.expanded .navbar-nav > li > a {
+  line-height: 70px; /* Ajusta la altura de línea deseada */
+}
+
+
+  .navbar li a, .navbar .navbar-brand { 
+    color: #000000 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+    }
+  .navbar-nav li.active a {
+    color: #696969 !important;
+    background-color: #B0E0E6 !important;
+    
+  }
+  .navbar-default{
+    border-color: transparent;
+    }
+
+    .navbar-nav>li>.dropdown-menu {
+    position: absolute;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #FFB6C1;
+}
+
+.navbar-toggle {
+   position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-right: 15px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #B0E0E6;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    
+}
+
+ .navbar-default .navbar-toggle:focus, 
+ .navbar-default .navbar-toggle:hover {
+    background-color: #B0E0E6;
+}
+
+  .open .dropdown-toggle {
+    position: relative;
+    color: #fff;
+    background-color: #B0E0E6 !important;
+  }
+
+ 
+
+  .dropdown-menu li a {
+    pointer-events: auto;
+    color: #F696969 !important;
+    background-color: #FFB6C1 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: #B0E0E6 !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+
+  .toggle-switch {
+      position: relative;
+      top: -8px;
+      right: -7px;
+      z-index: auto;
+    }
+    .toggle-switch input[type="checkbox"] {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+    }
+    .toggle-switch label {
+      cursor: pointer;
+      text-indent: -9999px;
+      width: 50px;
+      height: 25px;
+      background: grey;
+      display: block;
+      border-radius: 25px;
+      position: relative;
+    }
+        
+    
+    .toggle-switch label:after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 21px;
+      height: 21px;
+      background: #fff;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+    .toggle-switch input:checked + label {
+      background: #000000;
+    }
+    .toggle-switch input:checked + label:after {
+      left: calc(100% - 2px);
+      transform: translateX(-100%);
+    }
+    .toggle-switch label:active:after {
+      width: 28px;
+    }
+
+    .floating-whatsapp {
+  position: fixed;
+  bottom: 20px; /* Ajusta esta propiedad para controlar la distancia desde el borde inferior */
+  right: 20px; /* Ajusta esta propiedad para controlar la distancia desde el borde derecho */
+  z-index: 9999; /* Ajusta este valor si hay otros elementos superpuestos */
+}
+
+.floating-whatsapp img {
+  width: 100px; /* Ajusta este valor según el tamaño deseado para el botón de WhatsApp */
+  height: auto;
+}
+
+   
+
+
+
+
+/* Agrega estilos adicionales según sea necesario */
+     
+
+.volume-container {
+  position: absolute;
+  bottom: 5%;
+  right: 5%; /* Utilizar un valor relativo en lugar de un valor absoluto */
+    
+}
+
+.volume-slider-container {
+  display: none;
+  position: absolute;
+  bottom: 270%;
+  left: -10%; /* Utilizar un valor relativo en lugar de un valor absoluto */
+  transform: translateX(60%) rotate(180deg); /* Rotar el contenedor del deslizador */
+  transform-origin: top left; /* Establecer el punto de origen de la rotación */
+  width: 100px;
+  height: 10px;
+  mix-blend-mode: luminosity
+}
+
+.volume-slider-container input[type="range"] {
+  width: 100%;
+  height: 100%;
+  writing-mode: horizontal-tb; /* Orientación horizontal para el deslizador */
+  transform: rotate(90deg); /* Rotar el deslizador en sentido horario */
+  transform-origin: center center; /* Establecer el punto de origen de la rotación */
+}
+
+
+
+
+.volume-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  z-index: 10;
+
+}
+
+.volume-button img {
+  filter: invert(80%);
+  width: 20px;
+  height: 20px;
+}
+
+.sound-icon {
+  display: inline-block;
+  margin-right: 5px;
+
+}
+
+.mute-icon {
+  display: none;
+
+}
+
+.volume-button:hover + .volume-slider-container,
+.volume-slider-container:hover {
+  display: block;
+}
+
+.volume-container:hover .volume-button img.sound-icon {
+  display: none;
+
+}
+
+.volume-container:hover .volume-button img.mute-icon {
+  display: inline-block;
+}
+
+
+/* oculta el equipo en pantallas para que solo mueste el carousel*/
+
+@media (max-width: 768px) {
+  .slideanim .col-sm-6 {
+    display: none;
+  }
+}
+
+
+
