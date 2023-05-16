@@ -3,7 +3,7 @@ $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip(); 
   
   // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  $(".navbar a, footer a[href='#home']").on('click', function(event) {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -27,15 +27,17 @@ $(document).ready(function(){
   });
 
 
+
   $(window).scroll(function() {
     $(".slideanim").each(function(){
       var pos = $(this).offset().top;
       var winTop = $(window).scrollTop();
-      if (pos < winTop + 600) {
+      if (pos < winTop + 2000) {
         $(this).addClass("slide");
       }
     });
   });
+
 
    $('.carousel').carousel({
     interval: 5000
@@ -86,54 +88,6 @@ $(document).ready(function() {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  var video = document.getElementById('myVideo');
-  var volumeButton = document.getElementById('volumeButton');
-  var volumeSliderContainer = document.querySelector('.volume-slider-container');
-  var soundIcon = document.getElementById('soundIcon');
-  var muteIcon = document.getElementById('muteIcon');
-
-  // Verificar el estado inicial del video
-  if (video.muted) {
-    volumeButton.classList.add('muted');
-    soundIcon.style.display = 'none';
-    muteIcon.style.display = 'inline';
-  }
-
-  volumeButton.addEventListener('click', function() {
-    if (video.muted) {
-      video.muted = false;
-      volumeButton.classList.remove('muted');
-      soundIcon.style.display = 'inline';
-      muteIcon.style.display = 'none';
-    } else {
-      video.muted = true;
-      volumeButton.classList.add('muted');
-      soundIcon.style.display = 'none';
-      muteIcon.style.display = 'inline';
-    }
-  });
-
-  volumeButton.addEventListener('mouseover', function() {
-    volumeSliderContainer.style.display = 'block';
-  });
-
-  volumeButton.addEventListener('mouseleave', function() {
-    volumeSliderContainer.style.display = 'none';
-  });
-
-  volumeSliderContainer.addEventListener('mouseover', function() {
-    volumeSliderContainer.style.display = 'block';
-  });
-
-  volumeSliderContainer.addEventListener('mouseleave', function() {
-    volumeSliderContainer.style.display = 'none';
-  });
-
-  volumeSliderContainer.addEventListener('input', function() {
-    video.volume = volumeSlider.value;
-  });
-});
 
 
 
@@ -173,80 +127,38 @@ $(document).ready(function(){
 
 
 $(document).ready(function() {
+
+
   // Cerrar la barra de navegación al hacer clic en un elemento de navegación o en el logo
   $('.navbar-collapse ul, .logo-container').on('click touchstart', function() {
     $('.navbar-collapse').collapse('hide');
-    $('.dropdown-menu').removeClass('show'); // Cierra el menú desplegable
-    $('.dropdown-toggle').attr('aria-expanded', 'false'); // Cambia el estado del menú desplegable
     $('.navbar').removeClass('navbar-expanded'); // Quita la clase "navbar-expanded" de la barra de navegación
+    
   });
 
-  // Evitar que se cierre la barra de navegación al hacer clic en el menú desplegable y sus elementos
-  $('.dropdown-toggle').on('click touchstart', function(event) {
-    event.stopPropagation();
-    var $dropdownToggle = $(this);
-    var isExpanded = $dropdownToggle.attr('aria-expanded') === 'true';
-    $dropdownToggle.attr('aria-expanded', !isExpanded);
-    if ($(window).width() < 768) {
-      // Cerrar otros menús desplegables abiertos en la versión móvil
-      $('.dropdown-toggle').not($dropdownToggle).attr('aria-expanded', 'false');
-      $('.dropdown-menu').not($dropdownToggle.next('.dropdown-menu')).removeClass('show');
-    }
-  });
+  
 
   // Cerrar la barra de navegación al hacer clic en cualquier parte del body, excepto en el menú desplegable y sus elementos
-  $('body').on('click touchstart', function(event) {
-    var target = $(event.target);
-    if (!target.closest('.navbar-collapse').length && !target.closest('.dropdown-toggle').length && !target.closest('.dropdown-menu').length) {
-      $('.navbar-collapse').collapse('hide');
-      $('.dropdown-menu').removeClass('show'); // Cierra el menú desplegable
-      $('.dropdown-toggle').attr('aria-expanded', 'false'); // Cambia el estado del menú desplegable
-      $('.navbar').removeClass('navbar-expanded'); // Quita la clase "navbar-expanded" de la barra de navegación
-    }
-  });
-
-  // Añadir clase "navbar-expanded" a la barra de navegación cuando se abre el menú desplegable
-  $('.dropdown-toggle').on('click touchstart', function() {
-    var dropdownMenu = $(this).next('.dropdown-menu');
-    if (!dropdownMenu.hasClass('show')) {
-      dropdownMenu.addClass('show');
-      $(this).attr('aria-expanded', 'true');
-      $('.navbar').addClass('navbar-expanded'); // Agrega la clase "navbar-expanded" a la barra de navegación
-    } else {
-      dropdownMenu.removeClass('show');
-      $(this).attr('aria-expanded', 'false');
-      $('.navbar').removeClass('navbar-expanded'); // Quita la clase "navbar-expanded" de la barra de navegación
-    }
-  });
-
-  // Cerrar el menú desplegable al hacer clic en un elemento dentro de él
-  $('.dropdown-menu').on('click touchstart', function(event) {
-    event.stopPropagation();
-    $('.dropdown-menu').removeClass('show');
-    $('.dropdown-toggle').attr('aria-expanded', 'false');
-    $('.navbar').removeClass('navbar-expanded'); // Quita la clase "navbar-expanded" de la barra de navegación
-  });
-});
 
 
 
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  var dropdownMenu = document.getElementById('dropdownMenu');
-  var dropdownToggle = document.getElementById('dropdownToggle');
-  var dropdownItems = dropdownMenu.getElementsByClassName('dropdown-item');
-
-  dropdownMenu.addEventListener('mouseenter', function() {
-    dropdownToggle.click();
-  });
-
-  for (var i = 0; i < dropdownItems.length; i++) {
-    dropdownItems[i].addEventListener('click', function() {
-      dropdownToggle.click();
-    });
+$('html').on('click touchstart', function(event) {
+  var target = $(event.target);
+  if (!target.closest('.navbar-collapse').length) {
+    $('.navbar-collapse').collapse('hide');
+    $('.navbar').removeClass('navbar-expanded');
+    
   }
 });
+
+});
+
+
+
+
+
+
 
 
 
@@ -309,6 +221,145 @@ $(document).ready(function() {
 });
 
 
+
+$(document).ready(function() {
+  var videoMovil = $('#videoMovil');
+
+  videoMovil.swipe({
+    swipeLeft: function(){
+      $(this).carousel('next');
+    },
+    swipeRight: function(){
+      $(this).carousel('prev');
+    },
+  });
+
+  $('#videoMovil').carousel({
+    interval: false
+  });
+
+  // Obtener todos los elementos de video
+  var videos = $('video');
+
+  // Agregar event listener para el evento "play"
+  videos.on('play', function() {
+    // Pausar los demás videos
+    videos.not(this).each(function() {
+      this.pause();
+    });
+  });
+
+  // Agregar event listener para el evento "slide.bs.carousel"
+  $('#videoMovil').on('slide.bs.carousel', function() {
+    // Pausar todos los videos cuando se deslice el carrusel
+    videos.each(function() {
+      this.pause();
+    });
+  });
+});
+
+
+
+$(document).ready(function() {
+  // Obtener todos los elementos de video
+  var videos = $('video');
+
+  // Agregar event listener para el evento "play"
+  videos.on('play', function() {
+    // Pausar los demás videos
+    videos.not(this).each(function() {
+      this.pause();
+    });
+  });
+
+  // Verificar el cambio de tamaño de pantalla
+  var mediaQueryList = window.matchMedia('(max-width: 768px)'); // Cambia el valor según sea necesario
+
+  function handleScreenChange(e) {
+    if (e.matches) {
+      // Pausar todos los videos si el tamaño de la pantalla cambia
+      videos.each(function() {
+        if (!this.paused) {
+          this.pause();
+        }
+      });
+    } else {
+      // Reanudar los videos cuando el tamaño de la pantalla regrese
+      videos.each(function() {
+        if (this.paused) {
+          this.play();
+        }
+      });
+    }
+  }
+
+  // Agregar event listener para el evento "change" en el media query
+  mediaQueryList.addListener(handleScreenChange);
+
+  // Ejecutar la función inicialmente para verificar el estado actual del media query
+  handleScreenChange(mediaQueryList);
+});
+
+
+$(document).ready(function() {
+  // Obtener los elementos de video fuente y de destino
+  var videoFuente = $('#myVideo1')[0];
+  var videoDestino = $('#video1-movil')[0];
+
+  // Evento "play" en el video fuente
+  videoFuente.addEventListener('play', function() {
+    videoDestino.currentTime = videoFuente.currentTime;
+  });
+
+  // Evento "pause" en el video fuente
+  videoFuente.addEventListener('pause', function() {
+    videoDestino.currentTime = videoFuente.currentTime;
+  });
+
+  // Evento "play" en el video de destino
+  videoDestino.addEventListener('play', function() {
+    videoFuente.currentTime = videoDestino.currentTime;
+  });
+
+  // Evento "pause" en el video de destino
+  videoDestino.addEventListener('pause', function() {
+    videoFuente.currentTime = videoDestino.currentTime;
+  });
+});
+
+
+$(document).ready(function() {
+  // Obtener los elementos de video fuente y de destino
+  var videoFuente = $('#myVideo2')[0];
+  var videoDestino = $('#video2-movil')[0];
+
+  // Evento "play" en el video fuente
+  videoFuente.addEventListener('play', function() {
+    videoDestino.currentTime = videoFuente.currentTime;
+  });
+
+  // Evento "pause" en el video fuente
+  videoFuente.addEventListener('pause', function() {
+    videoDestino.currentTime = videoFuente.currentTime;
+  });
+
+  // Evento "play" en el video de destino
+  videoDestino.addEventListener('play', function() {
+    videoFuente.currentTime = videoDestino.currentTime;
+  });
+
+  // Evento "pause" en el video de destino
+  videoDestino.addEventListener('pause', function() {
+    videoFuente.currentTime = videoDestino.currentTime;
+  });
+});
+
+
+
+//deshabilita el clic derecho, menu para guardar ima
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
 
 
 
