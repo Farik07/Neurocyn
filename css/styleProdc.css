@@ -1,0 +1,46 @@
+.containerProductos {
+  height: 870px;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  max-width: 100%; /* Utilizamos max-width en lugar de width */
+}
+
+.gallery .grid-item {
+  background-color: #4e4e4e59;
+  padding: 20px;
+  border-radius: 25%;
+  width: 100%; /* Establecemos un ancho del 100% */
+  height: auto; /* Ajustamos la altura automáticamente */
+}
+
+.grid-item img {
+  width: 60%;
+  height: auto;
+  cursor: pointer;
+}
+
+.popup{
+  display: none;
+}
+
+.popup-image {
+  display: block;
+  max-width: 70%;
+  max-height: 70%;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #9ea1a19c;
+  border-radius: 30px;
+}
+
+
+
+
